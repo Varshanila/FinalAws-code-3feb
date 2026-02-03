@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .login-box {
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .login-box h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            font-size: 15px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .admin-login-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .admin-login-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h3>🔐 Admin Login</h3>
+
+    <form action="/api/admin-login-submit" method="POST">
+        <div class="form-group">
+            <label for="adminEmail">Admin Email</label>
+            <input type="email"
+                   id="adminEmail"
+                   name="adminEmail"
+                   placeholder="admin@company.com"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password"
+                   id="adminPassword"
+                   name="adminPassword"
+                   placeholder="Enter password"
+                   required>
+        </div>
+
+        <button type="submit" class="admin-login-btn">
+            Login to Admin Dashboard
+        </button>
+    </form>
+</div>
+
+</body>
+</html>
