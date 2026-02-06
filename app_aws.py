@@ -18,7 +18,7 @@ USER_TABLE = dynamodb.Table("UserTable")        # PK: email
 ADMIN_TABLE = dynamodb.Table("AdminTable")      # PK: email
 CAMPAIGN_TABLE = dynamodb.Table("CampaignsTable")  # PK: campaign_id
 
-SNS_TOPIC_ARN = None  # set by test_app.py when using Moto
+
 
 # ---------------- DECORATORS ---------------- #
 def login_required(f):
@@ -204,3 +204,4 @@ def logout():
 # ---------------- RUN APP ---------------- #
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
